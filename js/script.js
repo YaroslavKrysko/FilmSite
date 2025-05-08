@@ -22,9 +22,13 @@ const movieDB = {
         "Одержимость",
         "Скотт Пилигрим против..."
     ]
+
 };
 
-document.querySelector('.promo__adv').remove();
+const adv = document.querySelectorAll('.promo__adv img');
+adv.forEach(item => {
+    item.remove();
+});
 
 document.querySelector('.promo__genre').remove();
 document.querySelector('.promo__title').insertAdjacentHTML('beforebegin', '<div class="promo__genre">драма</div>');
